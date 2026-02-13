@@ -1,0 +1,8 @@
+.DS*
+*~
+*.ipynb
+*SCAFFOLDING.md
+assets/*
+test.py
+test.txt
+__pycache__
