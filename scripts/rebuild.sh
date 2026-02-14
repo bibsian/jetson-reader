@@ -22,15 +22,6 @@ sleep 3
 # Extract port from bore output
 PORT=$(grep -o 'bore.pub:[0-9]*' /tmp/bore.log | head -1 | cut -d: -f2)
 
-if [ -z "$PORT" ]; then
-    echo "ERROR: Could not detect bore port. Check /tmp/bore.log"
-    cat /tmp/bore.log
-    exit 1
-fi
-
-echo "==> Installing SSH key..."
-ssh-copy-id -i ~/.ssh/reading_assistant -p $PORT root@bore.pub
-
 echo ""
 echo "=========================================="
 echo "Bore port for solveit: $PORT"
