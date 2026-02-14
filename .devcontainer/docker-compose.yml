@@ -1,8 +1,8 @@
 services:
   reading-assistant-dev:
     build:
-      context: .
-      dockerfile: Dockerfile
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
     container_name: reading-assistant-dev
     ports:
       - "2222:22"

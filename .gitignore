@@ -6,3 +6,4 @@ assets/*
 test.py
 test.txt
 __pycache__
+*.pub
